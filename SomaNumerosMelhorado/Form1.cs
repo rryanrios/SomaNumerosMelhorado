@@ -10,11 +10,36 @@ using System.Windows.Forms;
 
 namespace SomaNumerosMelhorado
 {
-    public partial class Form1 : Form
+    public partial class FrmSoma : Form
     {
-        public Form1()
+        public FrmSoma()
         {
             InitializeComponent();
+        }
+
+        private void btnCalcular_Click(object sender, EventArgs e)
+        {
+            int i, num, soma = 0;
+
+            // extraindo número do TextBox
+
+            num = Convert.ToInt32(txtNum.Text);
+
+            /* inicializa o laço em 1; *
+             * testa a condição de parada: i <= num *
+             * incrementa a variavel i++ */
+            for (i = 1; i <= num; i++)
+            {
+                //verifica se i é par
+                if (i % 2 == 0)
+                {
+                    //faz o somatório dos números pares
+                    soma += i;
+                }
+            }
+
+            //apresenta o total da soma dos pares no txtSoma
+            txtSoma.Text = soma.ToString();
         }
     }
 }
