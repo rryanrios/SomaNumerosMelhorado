@@ -30,12 +30,12 @@
         {
             this.lblNum = new System.Windows.Forms.Label();
             this.txtNum = new System.Windows.Forms.TextBox();
+            this.lblMultiplo = new System.Windows.Forms.Label();
+            this.txtMult = new System.Windows.Forms.TextBox();
             this.btnLimpar = new System.Windows.Forms.Button();
             this.btnCalcular = new System.Windows.Forms.Button();
             this.lblSoma = new System.Windows.Forms.Label();
             this.txtSoma = new System.Windows.Forms.TextBox();
-            this.lblMultiplo = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // lblNum
@@ -54,21 +54,38 @@
             this.txtNum.Size = new System.Drawing.Size(210, 20);
             this.txtNum.TabIndex = 1;
             // 
+            // lblMultiplo
+            // 
+            this.lblMultiplo.AutoSize = true;
+            this.lblMultiplo.Location = new System.Drawing.Point(12, 36);
+            this.lblMultiplo.Name = "lblMultiplo";
+            this.lblMultiplo.Size = new System.Drawing.Size(43, 13);
+            this.lblMultiplo.TabIndex = 2;
+            this.lblMultiplo.Text = "Múltiplo";
+            // 
+            // txtMult
+            // 
+            this.txtMult.Location = new System.Drawing.Point(62, 33);
+            this.txtMult.Name = "txtMult";
+            this.txtMult.Size = new System.Drawing.Size(210, 20);
+            this.txtMult.TabIndex = 3;
+            // 
             // btnLimpar
             // 
             this.btnLimpar.Location = new System.Drawing.Point(15, 61);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(75, 23);
-            this.btnLimpar.TabIndex = 2;
+            this.btnLimpar.TabIndex = 4;
             this.btnLimpar.Text = "Limpar";
             this.btnLimpar.UseVisualStyleBackColor = true;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // btnCalcular
             // 
             this.btnCalcular.Location = new System.Drawing.Point(200, 61);
             this.btnCalcular.Name = "btnCalcular";
             this.btnCalcular.Size = new System.Drawing.Size(75, 23);
-            this.btnCalcular.TabIndex = 3;
+            this.btnCalcular.TabIndex = 5;
             this.btnCalcular.Text = "Calcular";
             this.btnCalcular.UseVisualStyleBackColor = true;
             this.btnCalcular.Click += new System.EventHandler(this.btnCalcular_Click);
@@ -79,38 +96,23 @@
             this.lblSoma.Location = new System.Drawing.Point(12, 87);
             this.lblSoma.Name = "lblSoma";
             this.lblSoma.Size = new System.Drawing.Size(34, 13);
-            this.lblSoma.TabIndex = 4;
+            this.lblSoma.TabIndex = 6;
             this.lblSoma.Text = "Soma";
             // 
             // txtSoma
             // 
+            this.txtSoma.Enabled = false;
             this.txtSoma.Location = new System.Drawing.Point(15, 103);
             this.txtSoma.Name = "txtSoma";
             this.txtSoma.Size = new System.Drawing.Size(260, 20);
-            this.txtSoma.TabIndex = 5;
-            // 
-            // lblMultiplo
-            // 
-            this.lblMultiplo.AutoSize = true;
-            this.lblMultiplo.Location = new System.Drawing.Point(12, 36);
-            this.lblMultiplo.Name = "lblMultiplo";
-            this.lblMultiplo.Size = new System.Drawing.Size(43, 13);
-            this.lblMultiplo.TabIndex = 6;
-            this.lblMultiplo.Text = "Múltiplo";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(62, 33);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(210, 20);
-            this.textBox1.TabIndex = 7;
+            this.txtSoma.TabIndex = 7;
             // 
             // FrmSoma
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(287, 135);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtMult);
             this.Controls.Add(this.lblMultiplo);
             this.Controls.Add(this.txtSoma);
             this.Controls.Add(this.lblSoma);
@@ -131,12 +133,13 @@
 
         private System.Windows.Forms.Label lblNum;
         private System.Windows.Forms.TextBox txtNum;
+        private System.Windows.Forms.Label lblMultiplo;
+        private System.Windows.Forms.TextBox txtMult;
         private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.Button btnCalcular;
         private System.Windows.Forms.Label lblSoma;
         private System.Windows.Forms.TextBox txtSoma;
-        private System.Windows.Forms.Label lblMultiplo;
-        private System.Windows.Forms.TextBox textBox1;
+        
     }
 }
 
